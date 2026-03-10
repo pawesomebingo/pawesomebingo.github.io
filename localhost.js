@@ -4,7 +4,7 @@ import HTTP from 'http';
 import URL from 'url';
 
 const PORT = process.argv[2] || 80;
-const WEBPAGES = ['/404', '/test'];
+const WEBPAGES = ['/404', '/test', '/qrcode'];
 const MIME_TYPES = {
     html: 'text/html',
     css: 'text/css',
