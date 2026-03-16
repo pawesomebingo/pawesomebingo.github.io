@@ -1,5 +1,9 @@
 {
-  "devDependencies": {
-    "wrangler": "^4.71.0"
-  }
+    "scripts": {
+        "wrangler-dev": "wrangler pages dev --port=80",
+        "wrangler-deploy": "wrangler pages deploy"
+    },
+    "devDependencies": {
+        "wrangler": "^4.74.0"
+    }
 }
