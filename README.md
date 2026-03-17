@@ -10,9 +10,12 @@
 ### TODO
 
 - HEADER
+    - Add colllapse/uncollapse toggle button for mobile menu.
     - Add earned funds counter.
-    - Add colllapse/uncollapse menu toggle button.
+- PB TEAM
+    - Create page.
 - FOOTER
     - Add more content.
 - MISC
+    - Add hover states to buttons.
     - Add JS CMS spreadsheets.
