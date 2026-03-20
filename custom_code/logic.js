@@ -1,4 +1,4 @@
-// <script src="code_post.js"></script>
+// <script src="/custom_code/logic.js"></script>
 
 setTimeout(
     () =>

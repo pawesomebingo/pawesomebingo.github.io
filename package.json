@@ -4,6 +4,7 @@
         "wrangler-deploy": "wrangler pages deploy"
     },
     "devDependencies": {
+        "cheerio": "^1.2.0",
         "wrangler": "^4.74.0"
     }
 }
