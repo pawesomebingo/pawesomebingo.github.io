@@ -14,8 +14,6 @@
     - Add colllapse/uncollapse toggle button for mobile menu.
     - Add dropdown menus.
     - Make earned funds counter dynamic.
-- FOOTER
-    - Add more content.
 - MISC
     - Add animations.
         - Page load.
