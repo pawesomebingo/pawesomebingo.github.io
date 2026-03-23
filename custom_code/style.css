@@ -1,37 +1,5 @@
 /* <link href="/custom_code/style.css" rel="stylesheet" type="text/css" /> */
 
-.menu-button-6[aria-expanded='false'] {
-    background-color: transparent;
-    color: var(--green);
-}
-
 .menu-button-6[aria-expanded='true'] {
-    background-color: #a40000;
-    color: white;
-}
-
-/* Temp Before Webflow Port */
-
-.parent_banner:has(.link_banner:hover) {
-    background-color: #8366d4;
-}
-
-.nav-dropdown-link-6.w-dropdown-link:hover {
-    background-color: #f0f0f0;
-}
-
-.button[data-wf--button--variant='base']:hover,
-.button[data-wf--button--variant='base_nav']:hover,
-.button[data-wf--button--variant='scroll']:hover,
-.button.w-inline-block:hover {
-    background-color: #78af56;
-}
-
-.button[data-wf--button--variant='secondary']:hover,
-.button.w-inline-block:hover {
-    border-color: #bfbfbf;
-}
-
-.link_navlink[data-wf--navlink--variant='footer']:hover {
-    color: black;
+    background-color: var(--nav_toggle_hover_bg);
 }
