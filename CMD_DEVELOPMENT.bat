@@ -13,7 +13,7 @@ SET "dir_downloads=%USERPROFILE%\Downloads"
 SET /P input="ENTER: "
 
 IF %input% == 1 (
-    CALL node download_site.js https://pawesome-bingo.webflow.io
+    CALL node download_site.js https://pawesomebingo.webflow.io
 )
 
 @REM IF %input% == 2 (

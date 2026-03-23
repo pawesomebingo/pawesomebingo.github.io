@@ -4,7 +4,7 @@
 
 - (#1) https://pawesomebingo.pages.dev
 - (#2) https://pawesomebingo.github.io
-- (#3) https://pawesome-bingo.webflow.io
+- (#3) https://pawesomebingo.webflow.io
 
 # DEVELOPMENT NOTES
 
