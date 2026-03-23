@@ -11,8 +11,6 @@
 ### TODO
 
 - HEADER
-    - Add colllapse/uncollapse toggle button for mobile menu.
-    - Add dropdown menus.
     - Make earned funds counter dynamic.
 - MISC
     - Add animations.
