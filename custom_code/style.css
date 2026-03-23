@@ -1,5 +1,1 @@
 /* <link href="/custom_code/style.css" rel="stylesheet" type="text/css" /> */
-
-.menu-button-6[aria-expanded='true'] {
-    background-color: var(--nav_toggle_hover_bg);
-}

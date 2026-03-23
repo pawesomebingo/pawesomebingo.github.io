@@ -2067,8 +2067,8 @@ textarea.w-input, textarea.w-select {
   --button_base_hover_bg: #78af56;
   --button_secondary_hover_bdr: #bfbfbf;
   --header_bg: #ffffff80;
-  --dropdown_item_hover_bg: #f0f0f0;
   --nav_toggle_hover_bg: #a40000;
+  --dropdown_item_hover_bg: #f0f0f0;
   --transition: 100;
 }
 
@@ -3392,6 +3392,10 @@ ul {
 
   .menu-button-6 {
     border-radius: .25rem;
+  }
+
+  .menu-button-6.w--open {
+    background-color: var(--nav_toggle_hover_bg);
   }
 
   .parent_statistics {
