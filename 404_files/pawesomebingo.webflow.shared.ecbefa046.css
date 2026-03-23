@@ -2054,6 +2054,22 @@ textarea.w-input, textarea.w-select {
   font-display: swap;
 }
 
+@font-face {
+  font-family: Montserrat Variablefont Wght;
+  src: url("https://cdn.prod.website-files.com/69813a32083a84464b4bd157/69c1bbf7676d988ad5a72022_Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Oswald Variablefont Wght;
+  src: url("https://cdn.prod.website-files.com/69813a32083a84464b4bd157/69c1bbf9c11e7954f4b24399_Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --grey_txt: grey;
   --white_any: white;
@@ -2139,7 +2155,7 @@ ul {
 
 .heading_section {
   margin-top: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 4rem;
   font-weight: 900;
   line-height: 4rem;
@@ -2200,7 +2216,7 @@ ul {
 .rich_text h1 {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
 }
 
 .rich_text ul {
@@ -2329,7 +2345,7 @@ ul {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.75rem;
   font-weight: 900;
   line-height: 1.75rem;
@@ -2340,8 +2356,9 @@ ul {
   text-align: center;
   margin-top: 0;
   margin-bottom: 40px;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2rem;
 }
 
@@ -2414,6 +2431,10 @@ ul {
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
+}
+
+.container_statistics.page_load_scale {
+  overflow: hidden;
 }
 
 .child_statistic {
@@ -2510,7 +2531,7 @@ ul {
   width: auto;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
   line-height: 1.875rem;
@@ -2523,7 +2544,7 @@ ul {
   white-space: nowrap;
   margin-top: 0;
   margin-bottom: 5px;
-  font-family: Oswald, sans-serif;
+  font-family: Oswald Variablefont Wght, Times New Roman, sans-serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 2rem;
@@ -2637,7 +2658,7 @@ ul {
 .heading_404 {
   text-align: center;
   margin-top: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
   line-height: 1.875rem;
@@ -2647,7 +2668,7 @@ ul {
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
   line-height: 1.875rem;
@@ -2696,7 +2717,7 @@ ul {
 .heading_footer {
   text-align: center;
   margin-left: 10px;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: .9375rem;
   font-weight: 700;
   line-height: 1.875rem;
@@ -2941,6 +2962,7 @@ ul {
 }
 
 .menu-button-6.w--open {
+  background-color: var(--nav_toggle_hover_bg);
   font-size: 1rem;
   line-height: 12rem;
 }
@@ -3003,7 +3025,7 @@ ul {
   width: auto;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
   line-height: 1.875rem;
@@ -3021,6 +3043,10 @@ ul {
 
 .div-block-33 {
   margin-right: 20px;
+}
+
+.heading-2 {
+  font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
 }
 
 @media screen and (max-width: 991px) {
@@ -3168,7 +3194,6 @@ ul {
 
   .menu-button-6.w--open {
     color: #fff;
-    background-color: #a6b1bf;
   }
 
   .icon {
@@ -3392,10 +3417,6 @@ ul {
 
   .menu-button-6 {
     border-radius: .25rem;
-  }
-
-  .menu-button-6.w--open {
-    background-color: var(--nav_toggle_hover_bg);
   }
 
   .parent_statistics {
