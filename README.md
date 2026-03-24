@@ -16,3 +16,8 @@
     - Add icons to buttons.
     - Add JS CMS spreadsheets.
     - Add marquee animation to sponsors and team sections.
+
+### KNOWN ISSUES
+
+- HEADER
+    - Without spacing as a workound, close functionality for dropdown triggers interfere with each other.
