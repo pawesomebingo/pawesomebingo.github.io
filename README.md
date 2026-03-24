@@ -20,4 +20,4 @@
 ### KNOWN ISSUES
 
 - HEADER
-    - Without spacing as a workound, close functionality for dropdown triggers interfere with each other.
+    - Without spacing as workound, close functionality for dropdown triggers interfere with each other.
