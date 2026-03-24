@@ -16,6 +16,7 @@
     - Add icons to buttons.
     - Add JS CMS spreadsheets.
     - Add marquee animation to sponsors and team sections.
+    - Add commandline screenshot system to generate SS for OpenGraph.
 
 ### KNOWN ISSUES
 
