@@ -2244,6 +2244,7 @@ ul {
 
 .link_navlink:where(.w-variant-b9cf4dc0-9a9e-ec13-08a1-c9b947c79eb4) {
   height: 32px;
+  padding: 10px;
   font-size: .765625rem;
   line-height: 1.14844rem;
   transition: color .1s ease-in-out;
