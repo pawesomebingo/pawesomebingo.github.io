@@ -1,1 +1,5 @@
 /* <link href="/custom_code/style.css" rel="stylesheet" type="text/css" /> */
+
+.w-webflow-badge {
+  display: none !important;
+}
