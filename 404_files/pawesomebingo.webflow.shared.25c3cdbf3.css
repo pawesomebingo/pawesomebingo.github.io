@@ -2408,6 +2408,7 @@ ul {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
+  grid-auto-flow: row;
   justify-content: center;
   align-items: flex-end;
   display: flex;
@@ -3118,6 +3119,52 @@ ul {
   top: 101vh;
 }
 
+.div-block-36 {
+  background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
+  background-position: 0 0;
+  background-size: auto;
+}
+
+.container_team {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--border_bdr);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: var(--border_bdr);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--border_bdr);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: var(--border_bdr);
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.container_team.page_load_scale {
+  overflow: hidden;
+}
+
+.main_team {
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+  flex-flow: wrap;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: flex-end;
+  display: grid;
+}
+
 @media screen and (max-width: 991px) {
   .child_right {
     justify-content: center;
@@ -3299,6 +3346,13 @@ ul {
   .scrolltotop_proxy {
     height: 500vh;
   }
+
+  .main_team {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3315,6 +3369,10 @@ ul {
 
   .section_sponsors {
     padding-bottom: 0;
+  }
+
+  .main_sponsors {
+    grid-template-columns: 1fr 1fr;
   }
 
   .child_buttons_features {
@@ -3358,6 +3416,10 @@ ul {
     flex-direction: column;
     align-items: center;
     display: flex;
+  }
+
+  .main_team {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -3418,6 +3480,10 @@ ul {
   .text_pill {
     font-size: 10.7188px;
     line-height: 15.3125px;
+  }
+
+  .main_sponsors {
+    grid-template-columns: 1fr;
   }
 
   .link_banner {
@@ -3520,5 +3586,9 @@ ul {
   .heading_statistic {
     font-size: 1.25rem;
     line-height: 1.25rem;
+  }
+
+  .main_team {
+    grid-template-columns: 1fr;
   }
 }
