@@ -3,3 +3,26 @@
 .w-webflow-badge {
     display: none !important;
 }
+
+.link_navlink.w-dropdown:hover .w-dropdown-toggle {
+    color: var(--black_any);
+}
+
+.nav-dropdown-list-6::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid black;
+}
+
+.nav-dropdown-list-6 {
+    margin-top: 0px;
+    border-top: 20px solid transparent;
+    border-radius: 0;
+}
