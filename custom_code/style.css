@@ -1,28 +1,53 @@
 /* <link href="/custom_code/style.css" rel="stylesheet" type="text/css" /> */
 
+/* Remove Webflow Advertisment */
+
 .w-webflow-badge {
     display: none !important;
 }
+
+/* Emulate :focus-within */
 
 .link_navlink.w-dropdown:hover .w-dropdown-toggle {
     color: var(--black_any);
 }
 
-.nav-dropdown-list-6::before {
+/* Dropdown Up Arrow */
+
+.nav-dropdown-list-6 {
+    border-top: 19px solid transparent;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.nav-dropdown-list-6::after {
+    content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -20px;
+    top: -19px;
     width: 0;
     height: 0;
-    content: '';
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid black;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 19px solid var(--black_any);
+    z-index: 0;
 }
 
-.nav-dropdown-list-6 {
-    margin-top: 0px;
-    border-top: 20px solid transparent;
-    border-radius: 0;
+.nav-dropdown-list-6::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid var(--button_base_hover_bg);
+    z-index: 1;
+}
+
+.nav-dropdown-list-6 > :first-child {
+    border-top: 1px solid var(--black_any);
 }
