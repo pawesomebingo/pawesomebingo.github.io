@@ -2938,8 +2938,7 @@ ul {
 }
 
 .nav-dropdown-toggle-6:where(.w-variant-e0019972-7bca-92a1-716e-689667b3984c) {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 24px 0;
 }
 
 .nav-dropdown-toggle-6:hover {
