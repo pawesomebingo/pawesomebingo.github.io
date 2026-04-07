@@ -1,6 +1,6 @@
 const FS = require('fs');
 
-// index — CSS
+// index — CSS (head)
 
 const css_parent_index = 'index.html';
 const css_pattern_index =
@@ -9,7 +9,7 @@ const css_data_index = FS.readFileSync(css_parent_index, 'utf8');
 
 css_data_index.includes(css_pattern_index)
     ? (() => {
-          console.log('\nindex — CSS | ALREADY EXISTS...');
+          console.log('\nindex — CSS (head) | ALREADY EXISTS...');
 
           //   FS.writeFileSync(
           //       css_parent_index,
@@ -26,28 +26,52 @@ css_data_index.includes(css_pattern_index)
               'utf8'
           );
 
-          console.log('\nindex — CSS | DOES NOT EXIST: EXECUTING!');
+          console.log('\nindex — CSS (head) | DOES NOT EXIST: EXECUTING!');
       })();
 
-// index — JS
+// index — JS (head)
 
-const js_parent_index = 'index.html';
-const js_pattern_index = '<script src="/custom_code/logic.js"></script>';
-const js_data_index = FS.readFileSync(js_parent_index, 'utf8');
+const js_parent_index_head = 'index.html';
+const js_pattern_index_head = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "557899bdab3645b286aa7aaa60e96ff3"}'></script>`;
+const js_data_index_head = FS.readFileSync(js_parent_index_head, 'utf8');
 
-js_data_index.includes(js_pattern_index)
-    ? console.log('\nindex — JS | ALREADY EXISTS...')
+js_data_index_head.includes(js_pattern_index_head)
+    ? console.log('\nindex — JS (head) | ALREADY EXISTS...')
     : (() => {
           FS.writeFileSync(
-              js_parent_index,
-              js_data_index.replace('</body', `${js_pattern_index}</body`),
+              js_parent_index_head,
+              js_data_index_head.replace(
+                  '</head',
+                  `${js_pattern_index_head}</head`
+              ),
               'utf8'
           );
 
-          console.log('\nindex — JS | DOES NOT EXIST: EXECUTING!');
+          console.log('\nindex — JS (head) | DOES NOT EXIST: EXECUTING!');
       })();
 
-// 404 — CSS
+// index — JS (body)
+
+const js_parent_index_body = 'index.html';
+const js_pattern_index_body = '<script src="/custom_code/logic.js"></script>';
+const js_data_index_body = FS.readFileSync(js_parent_index_body, 'utf8');
+
+js_data_index_body.includes(js_pattern_index_body)
+    ? console.log('\nindex — JS (body) | ALREADY EXISTS...')
+    : (() => {
+          FS.writeFileSync(
+              js_parent_index_body,
+              js_data_index_body.replace(
+                  '</body',
+                  `${js_pattern_index_body}</body`
+              ),
+              'utf8'
+          );
+
+          console.log('\nindex — JS (body) | DOES NOT EXIST: EXECUTING!');
+      })();
+
+// 404 — CSS (head)
 
 const css_parent_404 = '404.html';
 const css_pattern_404 =
@@ -56,7 +80,7 @@ const css_data_404 = FS.readFileSync(css_parent_404, 'utf8');
 
 css_data_404.includes(css_pattern_404)
     ? (() => {
-          console.log('\n404 — CSS | ALREADY EXISTS...');
+          console.log('\n404 — CSS (head) | ALREADY EXISTS...');
 
           //   FS.writeFileSync(
           //       css_pattern_404,
@@ -73,17 +97,38 @@ css_data_404.includes(css_pattern_404)
               'utf8'
           );
 
-          console.log('\n404 — CSS | DOES NOT EXIST: EXECUTING!');
+          console.log('\n404 — CSS (head) | DOES NOT EXIST: EXECUTING!');
       })();
 
-// 404 — JS
+// 404 — JS (head)
+
+const js_parent_404_head = '404.html';
+const js_pattern_404_head = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "557899bdab3645b286aa7aaa60e96ff3"}'></script>`;
+const js_data_404_head = FS.readFileSync(js_parent_404_head, 'utf8');
+
+js_data_404_head.includes(js_pattern_404_head)
+    ? console.log('\n404 — JS (head) | ALREADY EXISTS...')
+    : (() => {
+          FS.writeFileSync(
+              js_parent_404_head,
+              js_data_404_head.replace(
+                  '</head',
+                  `${js_pattern_404_head}</head`
+              ),
+              'utf8'
+          );
+
+          console.log('\n404 — JS (head) | DOES NOT EXIST: EXECUTING!');
+      })();
+
+// 404 — JS (body)
 
 const js_parent_404 = '404.html';
 const js_pattern_404 = '<script src="/custom_code/logic.js"></script>';
 const js_data_404 = FS.readFileSync(js_parent_404, 'utf8');
 
 js_data_404.includes(js_pattern_404)
-    ? console.log('\n404 — JS | ALREADY EXISTS...')
+    ? console.log('\n404 — JS (body) | ALREADY EXISTS...')
     : (() => {
           FS.writeFileSync(
               js_parent_404,
@@ -91,5 +136,5 @@ js_data_404.includes(js_pattern_404)
               'utf8'
           );
 
-          console.log('\n404 — JS | DOES NOT EXIST: EXECUTING!');
+          console.log('\n404 — JS (body) | DOES NOT EXIST: EXECUTING!');
       })();
