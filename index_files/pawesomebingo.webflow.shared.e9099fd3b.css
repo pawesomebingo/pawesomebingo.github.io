@@ -3208,7 +3208,10 @@ blockquote {
 .container_contact.page_load_scale {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  flex-flow: column;
+  flex-flow: wrap;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
   width: fit-content;
   max-width: 960px;
   padding-left: 60px;
@@ -3240,7 +3243,7 @@ blockquote {
 .div-block-30-copy {
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  flex-flow: row;
+  flex-flow: wrap;
   justify-content: center;
   align-items: flex-end;
   display: flex;
@@ -3463,7 +3466,6 @@ blockquote {
   }
 
   .div-block-30-copy {
-    flex-flow: column;
     justify-content: center;
     align-items: center;
   }
