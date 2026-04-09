@@ -2,54 +2,51 @@ const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
 const url = process.argv[2];
-const OUT_HTML = 'index.html';
-const OUT_DIR = 'index_files';
-const OUT_404_HTML = '404.html';
-const OUT_404_DIR = '404_files';
+const OUTS = [
+    ['index.html', 'index_files', ''],
+    ['404.html', '404_files', '/___this_should_trigger_404___'],
+    ['contact.html', 'contact_files', '/contact']
+];
 
 !url ? (console.error('Usage: node savePage.js <url>'), process.exit(1)) : null;
 
-async function download(assetUrl, filePath) {
-    const res = await fetch(assetUrl);
-    const buf = Buffer.from(await res.arrayBuffer());
+const download = async (u, p) =>
+    fetch(u)
+        .then(r => r.arrayBuffer())
+        .then(b => fs.writeFileSync(p, Buffer.from(b)));
 
-    fs.writeFileSync(filePath, buf);
-}
+const clean = () =>
+    OUTS.forEach(
+        ([h, d]) => (
+            fs.existsSync(h) ? fs.unlinkSync(h) : null,
+            fs.existsSync(d)
+                ? fs.rmSync(d, { recursive: true, force: true })
+                : null,
+            fs.mkdirSync(d)
+        )
+    );
 
-function clean() {
-    fs.existsSync(OUT_HTML) ? fs.unlinkSync(OUT_HTML) : null;
-    fs.existsSync(OUT_DIR)
-        ? fs.rmSync(OUT_DIR, { recursive: true, force: true })
-        : null;
-    fs.existsSync(OUT_404_HTML) ? fs.unlinkSync(OUT_404_HTML) : null;
-    fs.existsSync(OUT_404_DIR)
-        ? fs.rmSync(OUT_404_DIR, { recursive: true, force: true })
-        : null;
-    fs.mkdirSync(OUT_DIR);
-    fs.mkdirSync(OUT_404_DIR);
-}
-
-async function processPage(html, baseUrl, outHtml, outDir) {
+const processPage = async (html, base, outHtml, outDir) => {
     const $ = cheerio.load(html);
-    const selectors = [
+    const sels = [
         ['img', 'src'],
         ['link', 'href'],
         ['script', 'src']
     ];
 
-    for (const [tag, attr] of selectors) {
+    for (const [tag, attr] of sels)
         for (const el of $(tag).toArray()) {
             const src = $(el).attr(attr);
 
             !src || src.startsWith('data:')
                 ? null
                 : await (async () => {
-                      const assetUrl = new URL(src, baseUrl).href;
+                      const assetUrl = new URL(src, base).href;
                       const filename = path.basename(assetUrl.split('?')[0]);
-                      const localPath = path.join(outDir, filename);
+                      const local = path.join(outDir, filename);
 
                       try {
-                          await download(assetUrl, localPath);
+                          await download(assetUrl, local);
 
                           $(el).attr(attr, `${outDir}/${filename}`);
                       } catch {
@@ -57,25 +54,21 @@ async function processPage(html, baseUrl, outHtml, outDir) {
                       }
                   })();
         }
-    }
 
     fs.writeFileSync(outHtml, $.html());
-}
+};
 
-async function save(url) {
+const saveVariant = async (base, htmlPath, outHtml, outDir) =>
+    fetch(base + htmlPath)
+        .then(r => r.text())
+        .then(t => processPage(t, base, outHtml, outDir));
+
+const save = async u => {
     clean();
 
-    const resIndex = await fetch(url);
-    const htmlIndex = await resIndex.text();
-    const res404 = await fetch(url + '/___this_should_trigger_404___');
-    const html404 = await res404.text();
+    for (const [html, dir, path] of OUTS) await saveVariant(u, path, html, dir);
 
-    await processPage(htmlIndex, url, OUT_HTML, OUT_DIR);
-    await processPage(html404, url, OUT_404_HTML, OUT_404_DIR);
-
-    console.log(
-        `Saved ${OUT_HTML} and ${OUT_DIR}/, ${OUT_404_HTML} and ${OUT_404_DIR}/`
-    );
-}
+    console.log(OUTS.map(([h, d]) => `${h} + ${d}/`).join(', '));
+};
 
 save(url);
