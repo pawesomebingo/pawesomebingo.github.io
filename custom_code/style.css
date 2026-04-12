@@ -11,7 +11,7 @@
 .w-dropdown:hover .w-dropdown-toggle,
 .w-dropdown:focus-within .w-dropdown-toggle {
     color: var(--black_any);
-    box-shadow: 0 -2px 0 inset;
+    box-shadow: 0 -0.25rem 0 inset;
 }
 
 /* Dropdown Up Arrow */

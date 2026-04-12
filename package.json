@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "wrangler-dev": "wrangler pages dev --port=80",
+        "wrangler-dev": "wrangler pages dev",
         "wrangler-deploy": "wrangler pages deploy"
     },
     "devDependencies": {

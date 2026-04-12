@@ -1,2 +1,5 @@
 name = "pawesomebingo"
 pages_build_output_dir = "."
+[dev]
+port = 80
+local_protocol = "http"

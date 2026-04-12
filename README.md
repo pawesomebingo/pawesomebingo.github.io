@@ -10,9 +10,8 @@
 
 ### TODO
 
-- HEADER
-    - Make earned funds counter dynamic.
 - MISC
+    - Add new sponsors.
     - Add icons to buttons.
     - Add JS CMS spreadsheets.
     - Add marquee animation to sponsors and team sections.
