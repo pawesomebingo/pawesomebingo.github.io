@@ -10,9 +10,12 @@
 
 ### TODO
 
+- LANDING
+    - Add Pawesome logo to landing section.
+    - Add date countdown timer.
 - MISC
     - Add new sponsors.
     - Add icons to buttons.
-    - Add JS CMS spreadsheets.
+    - Add JS CMS via WordPress or Google Sheets.
     - Add marquee animation to sponsors and team sections.
     - Add commandline screenshot system to generate SS for OpenGraph.

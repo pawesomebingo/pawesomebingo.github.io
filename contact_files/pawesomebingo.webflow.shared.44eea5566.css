@@ -2145,7 +2145,7 @@ blockquote {
   display: inline-flex;
 }
 
-.child_right:where(.w-variant-4666cdf0-1f4c-4352-da1e-8d06e684401c) {
+.child_right:where(.w-variant-4666cdf0-1f4c-4352-da1e-8d06e684401c), .child_right.page_load_scale:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
   justify-content: flex-start;
   align-items: center;
 }
@@ -2360,7 +2360,7 @@ blockquote {
   display: flex;
 }
 
-.main_landing:where(.w-variant-4666cdf0-1f4c-4352-da1e-8d06e684401c) {
+.main_landing:where(.w-variant-4666cdf0-1f4c-4352-da1e-8d06e684401c), .main_landing:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
   flex-flow: row-reverse wrap;
 }
 
@@ -2532,6 +2532,11 @@ blockquote {
 .link_image {
   transform-style: preserve-3d;
   transition: transform .1s ease-in-out;
+}
+
+.link_image:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+  width: fit-content;
+  height: 192px;
 }
 
 .link_image:hover, .link_image:hover:where(.w-variant-4666cdf0-1f4c-4352-da1e-8d06e684401c) {
@@ -3265,12 +3270,21 @@ blockquote {
   margin-top: 1.75rem;
 }
 
+.link-block-3:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+  margin-left: 96px;
+}
+
 @media screen and (max-width: 991px) {
   .child_right {
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-bottom: 0;
+  }
+
+  .child_right.page_load_scale:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+    justify-content: center;
+    align-items: center;
   }
 
   .image_brand {
@@ -3325,7 +3339,7 @@ blockquote {
     height: auto;
   }
 
-  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74) {
+  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74), .container_section:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
     padding-top: 0;
   }
 
@@ -3508,6 +3522,10 @@ blockquote {
     width: 100%;
     margin-top: 1.75rem;
   }
+
+  .link-block-3:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3616,7 +3634,7 @@ blockquote {
     padding-bottom: 40px;
   }
 
-  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74) {
+  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74), .container_section:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
     padding-top: 0;
   }
 
