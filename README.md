@@ -16,8 +16,3 @@
     - Add JS CMS spreadsheets.
     - Add marquee animation to sponsors and team sections.
     - Add commandline screenshot system to generate SS for OpenGraph.
-
-### KNOWN ISSUES
-
-- HEADER
-    - Without spacing as workound, close functionality for dropdown triggers interfere with each other.
