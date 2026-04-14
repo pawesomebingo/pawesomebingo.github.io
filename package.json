@@ -5,6 +5,6 @@
     },
     "devDependencies": {
         "cheerio": "^1.2.0",
-        "wrangler": "^4.82.1"
+        "wrangler": "^4.82.2"
     }
 }
