@@ -2539,6 +2539,7 @@ blockquote {
 }
 
 .link_image:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+  border-radius: 32rem;
   width: fit-content;
   height: 192px;
 }

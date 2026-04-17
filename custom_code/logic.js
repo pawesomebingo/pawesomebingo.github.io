@@ -2,7 +2,6 @@
 
 function setNewestDate() {
     const e = document.querySelector('.heading_event');
-    const d = new Date('2026-05-08');
 
     e.textContent = e
         ? `LIVE IN ${-Math.floor(

@@ -10,9 +10,8 @@
 
 ### TODO
 
-- LANDING
-    - Add Pawesome logo to landing section.
-    - Add date countdown timer.
+- HEADING
+    - Travel meter indicator.
 - MISC
     - Add new sponsors.
     - Add icons to buttons.
