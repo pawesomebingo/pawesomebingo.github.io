@@ -2165,7 +2165,7 @@ blockquote {
 }
 
 .child_left {
-  flex-flow: column wrap;
+  flex-flow: wrap;
   flex: 1;
   width: 100%;
   height: 100%;
@@ -2358,6 +2358,11 @@ blockquote {
   display: flex;
 }
 
+.container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74) {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .main_landing {
   justify-content: center;
   align-items: center;
@@ -2429,8 +2434,8 @@ blockquote {
   grid-auto-columns: 1fr;
   grid-auto-flow: row;
   justify-content: center;
-  align-items: flex-end;
-  display: flex;
+  align-items: center;
+  display: inline-grid;
 }
 
 .section_statistics {
@@ -2464,6 +2469,7 @@ blockquote {
 .container_statistics.page_load_scale {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+  max-width: 1280px;
 }
 
 .child_statistic {
@@ -2565,9 +2571,8 @@ blockquote {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-content: flex-start;
-  align-items: stretch;
-  width: fit-content;
-  margin-top: auto;
+  align-items: baseline;
+  width: 100%;
   margin-right: 20px;
   padding-left: 20px;
   display: flex;
@@ -2579,6 +2584,10 @@ blockquote {
   width: 100%;
   margin-right: 0;
   padding-left: 0;
+}
+
+.child_buttons_support:where(.w-variant-27d76e5b-4604-1ee6-0824-4c7fdc7d59a8) {
+  width: 100%;
 }
 
 .heading_sponsors {
@@ -3023,10 +3032,11 @@ blockquote {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
+  grid-auto-flow: row dense;
   justify-content: center;
-  align-items: flex-end;
-  width: fit-content;
-  display: grid;
+  place-items: flex-start baseline;
+  width: 100%;
+  display: flex;
 }
 
 .container_support {
@@ -3375,7 +3385,13 @@ blockquote {
     height: auto;
   }
 
-  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74), .container_section:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
+  .container_section:where(.w-variant-22049db1-3d43-a7a5-dd09-8a8207e8cf74) {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container_section:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
     padding-top: 0;
   }
 
@@ -3392,17 +3408,13 @@ blockquote {
   .main_sponsors {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
   }
 
   .container_statistics.page_load_scale {
     width: fit-content;
-  }
-
-  .child_buttons_support {
-    flex-flow: column;
-    width: 100%;
   }
 
   .heading_sponsors {
@@ -3421,6 +3433,10 @@ blockquote {
 
   .div-block-5 {
     width: 320px;
+  }
+
+  .rte_proxy_sponsors {
+    height: 100%;
   }
 
   .div-block-8 {
@@ -3526,6 +3542,11 @@ blockquote {
     padding-right: 20px;
   }
 
+  .container_support.page_load_scale {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .div-block-31 {
     margin-right: 5px;
   }
@@ -3595,7 +3616,7 @@ blockquote {
   }
 
   .main_sponsors {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .child_buttons_support {
@@ -3674,6 +3695,10 @@ blockquote {
     position: relative;
   }
 
+  .rich_text {
+    width: 100%;
+  }
+
   .link_navlink:where(.w-variant-b9cf4dc0-9a9e-ec13-08a1-c9b947c79eb4) {
     font-size: .65625rem;
     line-height: .984375rem;
@@ -3720,7 +3745,7 @@ blockquote {
   }
 
   .main_sponsors {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .container_statistics.page_load_scale {
@@ -3737,6 +3762,11 @@ blockquote {
     line-height: .984375rem;
   }
 
+  .child_buttons_support {
+    margin-right: 0;
+    padding-left: 0;
+  }
+
   .heading_sponsors {
     font-size: 1.25rem;
     line-height: 1.25rem;
@@ -3746,6 +3776,10 @@ blockquote {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .rte_proxy_sponsors {
+    width: 100%;
   }
 
   .banner_x {
@@ -3801,10 +3835,16 @@ blockquote {
 
   .div-block-30 {
     grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .container_support {
     max-width: none;
+  }
+
+  .container_support.page_load_scale {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .heading_statistic {
