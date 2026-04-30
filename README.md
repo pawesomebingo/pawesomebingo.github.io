@@ -2,9 +2,10 @@
 
 # LIVE DEMO
 
-- (#1) https://pawesomebingo.pages.dev
-- (#2) https://pawesomebingo.github.io
-- (#3) https://pawesomebingo.webflow.io
+- (#1) https://pawesomebingo.org
+- (#2) https://pawesomebingo.pages.dev
+- (#3) https://pawesomebingo.github.io
+- (#4) https://pawesomebingo.webflow.io
 
 # DEVELOPMENT NOTES
 
