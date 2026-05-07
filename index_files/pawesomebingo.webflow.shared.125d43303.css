@@ -2050,6 +2050,15 @@ textarea.w-input, textarea.w-select {
   display: grid;
 }
 
+.w-layout-grid {
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
 @font-face {
   font-family: Lexend Variablefont Wght;
   src: url("https://cdn.prod.website-files.com/69813a32083a84464b4bd157/69b875d991a11e770240a4d9_Lexend-VariableFont_wght.ttf") format("truetype");
@@ -2545,7 +2554,10 @@ blockquote {
 
 .link_image {
   transform-style: preserve-3d;
+  justify-content: center;
+  align-items: center;
   transition: transform .1s ease-in-out;
+  display: flex;
 }
 
 .link_image:where(.w-variant-127343fe-b783-5d55-4cea-cd3b724ec991) {
@@ -2598,7 +2610,7 @@ blockquote {
   text-align: center;
   width: auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-family: Montserrat Variablefont Wght, Times New Roman, sans-serif;
   font-size: 1.875rem;
   font-weight: 900;
@@ -2628,7 +2640,7 @@ blockquote {
 .div-block-2 {
   background-color: var(--banner_default_bg);
   border-radius: 32px;
-  width: 13%;
+  width: 2.5%;
   height: 12px;
   position: absolute;
 }
@@ -3288,6 +3300,14 @@ blockquote {
   height: 7.3125rem;
 }
 
+.image-8 {
+  width: auto;
+}
+
+.image-8:where(.w-variant-b738cd42-7746-4959-5cae-bb64ed8e1109) {
+  width: 75%;
+}
+
 .div-block-39 {
   flex-flow: column;
   justify-content: center;
@@ -3419,10 +3439,6 @@ blockquote {
 
   .container_statistics.page_load_scale {
     width: fit-content;
-  }
-
-  .heading_sponsors {
-    margin-bottom: 20px;
   }
 
   .link-block-2:where(.w-variant-33f3cad9-eb86-9b6a-e42a-2dd4646fe0bb) {
@@ -3628,11 +3644,6 @@ blockquote {
     grid-row-gap: 8px;
   }
 
-  .heading_sponsors {
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-
   .nav-menu-4 {
     flex-direction: column;
     padding-left: 0;
@@ -3770,6 +3781,10 @@ blockquote {
   .child_buttons_support {
     margin-right: 0;
     padding-left: 0;
+  }
+
+  .heading_sponsors {
+    margin-top: 0;
   }
 
   .div-block-5 {
