@@ -2640,7 +2640,7 @@ blockquote {
 .div-block-2 {
   background-color: var(--banner_default_bg);
   border-radius: 32px;
-  width: 2.5%;
+  width: 100%;
   height: 12px;
   position: absolute;
 }
